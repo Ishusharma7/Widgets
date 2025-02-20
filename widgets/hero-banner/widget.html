@@ -1,0 +1,87 @@
+
+<div class="banner-{{_.id}}">
+    <div class="container">
+        <div class="banner-content">
+            {{#if initialTitleVisible '==' 'show'}}
+            <p id="subtitle-before-{{_.id}}">{{initial_subtitle}}</p>
+            {{/if}}
+            
+            {{#if titleVisible '==' 'show'}}
+            <h1 id="hero-banner-heading-{{_.id}}">{{title}}</h1>
+            {{/if}}
+            {{#if descriptionVisible '==' 'show'}}
+            <p id="bc-description-text-{{_.id}}">{{subtitle}}</p>
+            {{/if}}
+        
+            {{#if buttonVisible '==' 'show'}}
+            <a href="{{bannerLink}}" class="button button--primary">{{buttonText}}</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+
+<style>
+#subtitle-before-{{_.id}},#bc-description-text-{{_.id}}{
+    font-family:{{descriptionFontFamily}};
+    font-weight:{{descriptionFontWeight}};
+    font-size:{{descriptionFontSizeMobile.value}}{{descriptionFontSizeMobile.type}};
+    @media only screen and (min-width: 768px) {
+        font-size:{{descriptionFontSize.value}}{{descriptionFontSize.type}};
+    }
+    color:{{textColor}};
+
+}
+#hero-banner-heading-{{_.id}}{
+    font-family:{{titleFontFamily}};
+    font-weight:{{titleFontWeight}};
+    font-size:{{titleFontSizeMobile.value}}{{titleFontSizeMobile.type}};
+    @media only screen and (min-width: 768px) {
+        font-size:{{titleFontSize.value}}{{titleFontSize.type}};
+    }
+    color:{{TitleTextColor}};
+    margin:15px 0;
+}
+.banner-{{_.id}} {
+    position: relative;
+    display: {{display}};
+    width: 100%;
+    height: {{containerHeight}};
+    background-image: url({{imageUrl.src}});
+    background-size: cover;
+    background-position: center;
+    align-items: end;
+    @media only screen and (min-width: 768px) {
+        align-items: center;
+    }
+    justify-content: flex-start;
+}
+
+.banner-content{
+    text-align: {{contentAlignment}};
+    padding-top: {{padding.top.value}}{{padding.top.type}};
+    padding-right: {{padding.right.value}}{{padding.right.type}};
+    padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+    padding-left: {{padding.left.value}}{{padding.left.type}};
+    margin-top: {{margin.top.value}}{{margin.top.type}};
+    margin-right: {{margin.right.value}}{{margin.right.type}};
+    margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+    margin-left: {{margin.left.value}}{{margin.left.type}};
+    max-width: 428px;
+}
+.banner-{{_.id}} .button{
+    padding:15px 65px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: {{buttonFontFamily}};
+    background: linear-gradient(90deg, #00819E 0%, #AD0062 100%);
+    border-radius: 5px;
+    color:{{button-text-color}};
+    text-decoration:none;
+}
+#bc-description-text-{{_.id}}{
+    margin: 0 0 25px 0;
+}
+</style>
+    
+
+

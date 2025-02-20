@@ -1,0 +1,312 @@
+
+<div class="banner-{{_.id}}">
+</div>
+
+<style>
+ 
+.banner-{{_.id}} {
+    position: relative;
+    width: 100%;
+    height:100vh;
+    border-radius: 5px;
+    display: {{display}};
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image:url('{{imageUrl.src}}');
+    background-size: cover;
+    background-position:center;
+    max-height: 560px;
+    align-items: start;
+    padding:15px;
+}
+@media (min-width: 768px) {
+    .banner-{{_.id}}{
+        max-height: 820px !important;
+        padding-left:30px;
+    }
+    .product-card-{{_.id}} {
+        max-width: 344px !important;
+    }
+    .banner-{{_.id}} .edition{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2; /* 19.2px */
+        letter-spacing: 0.32px;
+        margin-bottom: 20px;
+    }
+}
+
+.banner-{{_.id}} .showcase-wrapper{
+    max-width: 1340px;
+    width: 100%;
+}
+.product-card-{{_.id}} {
+    position: relative; /* Necessary for absolute positioning of the icon */
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 10px 15px 10px;
+    max-width: 237px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    @media (min-width: 768px) {
+        padding: 15px 15px 20px 15px;
+    }
+}
+.product-card-{{_.id}} .icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* width: 35px;
+    height: 35px; */
+}
+.product-card-{{_.id}} .brand-name-wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.product-card-{{_.id}} .brand-name-wrapper p{
+    margin-bottom: 0;
+}
+.banner-{{_.id}} .edition {
+    color: var(--White, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2; /* 19.2px */
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+        margin-bottom: 20px;
+    }
+}
+
+.product-image-{{_.id}} img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.product-card-{{_.id}} .product-details {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    @media (min-width: 768px) {
+        margin-top: 18px;
+    }
+}
+/* .product-card-{{_.id}} .sku-section,.nameprice-section{
+width: 50%;
+} */
+.product-card-{{_.id}} .sku{
+    margin-left: auto;
+}
+
+.product-card-{{_.id}} .product-name {
+    text-decoration: none;
+    color: var(--Black, #111);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.product-card-{{_.id}} .brand-name {
+    color: var(--Medium-Grey, #656565);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1; /* 10.2px */
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+}
+
+.banner-{{_.id}} .price {
+    color: var(--Black, #111);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.banner-{{_.id}} .sku {
+    color: var(--Medium-Grey, #656565);
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1 /* 10.2px */
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+    .banner-{{_.id}} {
+        padding: 50px 0 0 30px;
+    }
+}
+@media (min-width: 1380px) {
+    .banner-{{_.id}} {
+        padding:50px 0 0 0;
+    }
+}
+
+
+</style>
+    
+
+<script>
+
+{{#if product}}
+getProducts({{product}});
+
+function getProducts(productsId) {
+    let token = document.querySelector('[data-token]').getAttribute('data-token');
+    fetch('/graphql', {
+        method: 'POST',
+        credentials: 'same-origin',
+        cors:'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        },
+        body: JSON.stringify({
+            query: `
+            query MyQuery {
+                        site {
+                            product(entityId: ${productsId}) {
+                            defaultImage {
+                                url(width: 290, height: 290)
+                            }
+                            name
+                            sku
+                            prices {
+                                price {
+                                value
+                                currencyCode
+                                }
+                            }
+                            categories {
+                                edges {
+                                node {
+                                    name
+                                }
+                                }
+                            }
+                            addToWishlistUrl
+                            path
+                            }
+                        }
+                        }
+             `
+        }),
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+
+        const product = data.data.site.product;
+
+    
+        // Showcase Wrapper
+        const showcaseWrapper = document.createElement('div');
+        showcaseWrapper.className = 'showcase-wrapper';
+
+        // Title
+        
+        // const titleElement = document.createElement('p');
+        // titleElement.className = 'edition';
+        // titleElement.textContent = product.categories.edges[0]?.node.name || 'Category';
+        // showcaseWrapper.appendChild(titleElement);
+
+        // Product Card
+        const productCard = document.createElement('div');
+        productCard.className = `product-card-{{_.id}}`;
+
+        // Icon Container
+        const iconContainer = document.createElement('div');
+        iconContainer.className = 'icon-container';
+
+        // Icon Link
+        const iconLink = document.createElement('a');
+        iconLink.href = product.addToWishlistUrl;
+
+        const productLink = product.path;
+
+        // SVG Icon
+        iconLink.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                <circle cx="17.5" cy="17.5" r="17.5" fill="white"/>
+                <path d="M24.1758 7H17.4066L11 18.3626H16.8022L13.9011 29L24.9011 15.3407H18.978L24.1758 7Z" stroke="#656565" stroke-width="1.25" stroke-linejoin="round"/>
+            </svg>
+        `;
+        iconContainer.appendChild(iconLink);
+        productCard.appendChild(iconContainer);
+
+        // Product Image
+        const productImageWrapper = document.createElement('div');
+        productImageWrapper.className = `product-image-{{_.id}}`;
+        const productImage = document.createElement('img');
+        productImage.src = product.defaultImage.url;
+        productImage.alt = 'Product Image';
+        productImageWrapper.appendChild(productImage);
+        productCard.appendChild(productImageWrapper);
+
+        // Product Details
+        const productDetails = document.createElement('div');
+        productDetails.className = 'product-details';
+
+        // Name and Price Section
+        const namePriceSection = document.createElement('div');
+        namePriceSection.className = 'nameprice-section';
+
+        const productName = document.createElement('a'); // Create an anchor element
+        productName.className = 'product-name';         // Add class name
+        productName.textContent = product.name;         // Set the text content
+        productName.href = productLink;                 // Set the href to the product URL
+        namePriceSection.appendChild(productName);
+
+        // Brand Name Wrapper
+        const brandNameWrapper = document.createElement('div');
+        brandNameWrapper.className = 'brand-name-wrapper';
+
+        const brandName = document.createElement('p');
+        brandName.className = 'brand-name';
+        brandName.textContent = product.categories.edges[0]?.node.name || 'BRANDNAME';
+        brandNameWrapper.appendChild(brandName);
+
+        const sku = document.createElement('p');
+        sku.className = 'sku';
+        sku.textContent = product.sku;
+        brandNameWrapper.appendChild(sku);
+
+        namePriceSection.appendChild(brandNameWrapper);
+
+        if (product.prices?.price?.value) {
+            const price = document.createElement('p');
+            price.className = 'price';
+            price.textContent = `$${product.prices.price.value.toFixed(2)} ${product.prices.price.currencyCode}`;
+            namePriceSection.appendChild(price);
+        }
+
+        productDetails.appendChild(namePriceSection);
+        productCard.appendChild(productDetails);
+
+        // Append showcase wrapper to banner
+        showcaseWrapper.appendChild(productCard);
+        
+
+        // Append banner to the main container (assuming `.main-container` exists in your HTML)
+        document.querySelector('.banner-{{_.id}}').appendChild(showcaseWrapper);
+
+
+        
+        });
+}
+    
+{{/if}}
+
+</script>

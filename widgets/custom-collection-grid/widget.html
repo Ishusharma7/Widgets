@@ -1,0 +1,211 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+<style>
+    /* General Section Styling */
+    .products-section-{{_.id}} {
+        display: {{display}};
+        flex-direction: column;
+        overflow: hidden; /* Prevents horizontal scroll on the section */
+    }
+    
+    /* Header Styling */
+    .header-{{_.id}} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-{{_.id}} h2 {
+        color: var(--Black, #111);
+        text-transform: capitalize;
+        margin: 0;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.05; /* 42px */
+        padding-bottom: 15px;
+        padding-top: 20px;
+        @media (min-width: 768px) {
+            font-size: 64px;
+            line-height: 1.05;
+            padding-top: 0;
+        }
+        
+    }
+    
+    .collection-grid-Wrapper-{{_.id}} .special-deals-{{_.id}} {
+        color: #D90075; /* Matching the magenta/pinkish color */
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+    }
+     .special-deals-{{_.id}}{
+        text-decoration: unset;
+    }
+     .special-deals-{{_.id}}:hover {
+        text-decoration: underline;
+    }
+    
+    /* Collection Grid Wrapper */
+    .collection-grid-Wrapper-{{_.id}} {
+        display: flex;
+        overflow-x: auto; /* Enables horizontal scroll */
+        overflow-y: hidden; /* Prevent vertical scroll */
+        white-space: nowrap;
+        max-width: 100%;
+        height: 560px; /* Fixed height for the container */
+        margin-left:auto;
+        margin-right:auto;
+
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+    .collection-grid-Wrapper-{{_.id}} .slick-list.draggable{
+        min-width: 100%;
+    }
+    
+    /* Individual Collection Card Styling */
+    .collection-grid-Wrapper-{{_.id}} .collection {
+        height: 100%; /* Full height of container */
+        display: inline-block; /* Keeps items inline */
+        flex-direction: column;
+        align-items: flex-end;
+        overflow: hidden;
+    }
+
+    .collection-grid-Wrapper-{{_.id}} .collection:first-child {
+        border-radius: 5px 0px 0px 5px;
+    }
+    .collection-grid-Wrapper-{{_.id}} .collection:last-child {
+        border-radius: 0px 5px 5px 0px;
+    }
+    
+    .collection-grid-Wrapper-{{_.id}} .collection-image {
+        width: 100%;
+        height: 100%;
+        /* max-width: 335px; */
+        max-height: 440px;
+        min-height: 440px;kf
+        object-fit: cover;
+    }
+    
+    /* Title on each card */
+    .collection-grid-Wrapper-{{_.id}} .collection-card-link {
+        color: var(--Black, #111);
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 0.85; /* 18.7px */
+        letter-spacing: 0.44px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+    }
+    
+    .collection-grid-Wrapper-{{_.id}} .collection-title {
+        position: relative;
+        z-index: 1;
+        color: var(--Black, #111);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 0.85;
+        letter-spacing: 0.4px;
+        margin-top: 10px;
+        @media (min-width: 768px) {
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 0.85;
+            letter-spacing: 0.44px;
+            text-transform: uppercase;
+        }
+    }
+    
+    .collection-grid-Wrapper-{{_.id}} .collection-title:hover {
+        color: #D90075;
+    }
+    
+    
+    .products-section-{{_.id}} .header-{{_.id}} .special-deals-{{_.id}} {
+        color: var(--Deep-Pink, #AD0062);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    .collection-grid-Wrapper-{{_.id}}::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    /* Adjust spacing and layout for responsiveness */
+    @media (max-width: 768px) {
+        .collection-grid-Wrapper-{{_.id}} {
+            -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on mobile */
+        }
+        .collection-grid-Wrapper-{{_.id}} .collection-card-link {
+            font-size: 20px;
+            letter-spacing: 0.4px;
+        
+        }
+    }
+    </style>
+    
+    <section class="products-section-{{_.id}}">
+        <div class="header-{{_.id}}">
+            <h2>{{heading}}</h2>
+            <a href="{{linktodeal}}" class="special-deals-{{_.id}}">SPECIAL DEALS <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
+                <path d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM16.7071 8.20711C17.0976 7.81658 17.0976 7.18342 16.7071 6.79289L10.3431 0.428932C9.95262 0.0384078 9.31946 0.0384078 8.92893 0.428932C8.53841 0.819457 8.53841 1.45262 8.92893 1.84315L14.5858 7.5L8.92893 13.1569C8.53841 13.5474 8.53841 14.1805 8.92893 14.5711C9.31946 14.9616 9.95262 14.9616 10.3431 14.5711L16.7071 8.20711ZM1 8.5H16V6.5H1V8.5Z" fill="#AD0062"/>
+                </svg></a>
+        </div>
+        
+        <div class="collection-grid-Wrapper-{{_.id}}">
+            {{#each collections}}
+            <div class="collection">
+                <img src="{{categoryImageUrl.src}}" alt="{{categoryName}}" class="collection-image">
+                <a href="{{categoryUrl}}" class="collection-card-link">
+                    <p class="collection-title">{{categoryName}} <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15" fill="none">
+                        <path d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM16.7071 8.20711C17.0976 7.81658 17.0976 7.18342 16.7071 6.79289L10.3431 0.428932C9.95262 0.0384078 9.31946 0.0384078 8.92893 0.428932C8.53841 0.819457 8.53841 1.45262 8.92893 1.84315L14.5858 7.5L8.92893 13.1569C8.53841 13.5474 8.53841 14.1805 8.92893 14.5711C9.31946 14.9616 9.95262 14.9616 10.3431 14.5711L16.7071 8.20711ZM1 8.5H16V6.5H1V8.5Z" fill="#111111"/>
+                        </svg></p>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+ $('.collection-grid-Wrapper-{{_.id}}').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    centerMode: false, // Ensure it's off
+    centerPadding: '0px', // Remove padding if any
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }
+    ]
+});
+
+    </script>

@@ -1,0 +1,47 @@
+<div class='custom-product-set-wrapper'>
+    <div class='custom-product-set-list custom-product-set-list-{{_.id}}' {{#if slider_integrate}}data-slider='custom-product-slider'{{/if}}>
+        {{#each product.value}}{{#each ../_.data.site.products.edges}}{{#if ../productId '==' node.entityId}}<div class='custom-product-set-item product-count-{{../../productShowCount}}'>
+            <figure class='custom-product-set-figure'><a href='{{node.path}}'>
+                <img class='custom-product-set-image' src='{{node.defaultImage.default}}' alt='Product Image' width='275' height='275' loading='lazy'>
+            </a>
+        </figure>
+        <div class='custom-product-set-content'>
+            <div class='custom-product-set-addtocart {{../../button_visibility}}-this'>
+                <a href='{{node.addToCartUrl}}'>
+                    Add to Cart
+                </a>
+            </div>
+            <div class='custom-product-set-title custom-product-set-title-{{../../_.id}} {{../../title_visibility}}-this'>
+                <h2><a href='{{node.path}}'>
+                    {{node.name}}
+                </a>
+            </h2>
+        </div>
+        <div class='custom-product-set-price {{../../price_visibility}}-this'>
+            <p>{{node.prices.price.formatted}}</p>
+        </div>
+    </div>
+</div>
+{{/if}}{{/each}}{{/each}}
+</div>
+</div>
+<style>
+{{#if title-widget-text-style}}
+.custom-product-set-title-{{_.id}} a{
+    overflow: hidden;
+     text-overflow: ellipsis;
+      display: -webkit-box; -webkit-line-clamp: {{title-widget-text-style-lines.value}};
+       -webkit-box-orient: vertical; height: max-content;}
+       {{/if}}
+       .hide-this{
+        display:none !important;
+    }
+    .custom-product-set-list-{{_.id}}{
+        justify-content: {{productSetAlignment}};
+    }
+    {{#if product-full-width}}
+    .custom-product-set-list-{{_.id}} .custom-product-set-item{
+        width:100% !important;
+    }
+{{/if}}
+</style>

@@ -1,0 +1,40 @@
+{
+  "font-heading-mobile": {
+    "value": 28
+  },
+  "font-heading-desktop": {
+    "value": 36
+  },
+  "font-para-mobile": {
+    "value": 18
+  },
+  "font-para-desktop": {
+    "value": 20
+  },
+  "font-anchor-mobile": {
+    "value": 20
+  },
+  "font-anchor-desktop": {
+    "value": 20
+  },
+  "items": [
+    {
+      "item-1": "You’ve got <span class='deep-blue-color'>Questions</span>, We’ve got <span class='deep-blue-color'>Answers</span>",
+      "item-2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "button-text": "Shipping",
+      "button-link": "#"
+    },
+    {
+      "item-1": "You’ve got <span class='deep-blue-color'>Questions</span>, We’ve got <span class='deep-blue-color'>Answers</span>",
+      "item-2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "button-text": "Shipping",
+      "button-link": "#"
+    },
+    {
+      "item-1": "You’ve got <span class='deep-blue-color'>Questions</span>, We’ve got <span class='deep-blue-color'>Answers</span>",
+      "item-2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "button-text": "Shipping",
+      "button-link": "#"
+    }
+  ]
+}

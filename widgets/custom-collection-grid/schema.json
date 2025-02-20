@@ -1,0 +1,83 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Sample Text",
+        "settings": [
+          {
+            "type": "select",
+            "id": "display",
+            "label": "Enable Widget",
+            "default": "flex",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "Yes",
+                "value": "flex"
+              },
+              {
+                "label": "No",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "type": "input",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Our products"
+          },
+          {
+            "type": "input",
+            "id": "linktodeal",
+            "label": "Link To All Collection",
+            "default": "/all-collection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Collections",
+    "id": "collections",
+    "defaultCount": 1,
+    "entryLabel": "Category",
+    "schema": [
+        {
+            "type": "tab",
+            "label": "Category Settings",
+            "sections": [
+                {
+                    "settings": [
+                        {
+                            "type": "input",
+                            "id": "categoryName",
+                            "label": "Category Name",
+                            "default": "werks edition"
+                        },
+                        {
+                          "type": "input",
+                          "id": "categoryUrl",
+                          "label": "Category Link URL",
+                          "default": "/url-to-category"
+                      },
+                      {
+                        "type": "imageManager",
+                        "id": "categoryImageUrl",
+                        "default": {
+                            "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    }
+                   
+                    ]
+                }
+            ]
+        }
+    ]
+}
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "wrapper-configration",
+        "settings": [
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+          },
+         
+          {
+            "type": "boxModel",
+            "label": "Margin",
+            "id": "margin",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Padding",
+            "id": "padding",
+            "default": {
+              "top": {
+                "value": "16",
+                "type": "px"
+              },
+              "right": {
+                "value": "10",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "16",
+                "type": "px"
+              },
+              "left": {
+                "value": "10",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Social Icon",
+    "id": "socialicon",
+    "defaultCount": 3,
+    "entryLabel": "Icon",
+    "thumbnail": {
+    "type": "image",
+    "valueKey": "imageUrl.src"
+  },
+    "schema": [
+    {
+    "type": "tab",
+    "label": "Social Icon",
+    "id": "sliderSettings",
+    "sections": [
+      {
+        "settings": [
+          {
+            "label": "Image",
+            "type": "imageManager",
+            "id": "imageUrl",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "image-anchor",
+            "label": "image url",
+            "default": ""
+          },
+          {
+            "label": "image width",
+            "type":"number",
+            "id":"img-width",
+            "default": {
+            "value": 200
+          },
+          "typeMeta": {
+            "parseType": "integer"
+          }
+          },
+          {
+            "label": "image height",
+            "type":"number",
+            "id":"img-height",
+            "default": {
+            "value": 70
+          },
+          "typeMeta": {
+            "parseType": "integer"
+          }
+          }
+        ]
+      }
+    ]
+  }
+]
+}
+]

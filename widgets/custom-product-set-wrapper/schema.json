@@ -1,0 +1,147 @@
+[
+  {
+    "type": "hidden",
+    "settings": [
+      {
+        "type": "graphQl",
+        "id": "graphQueries",
+        "typeMeta": {
+          "mappings": {
+            "productIds": {
+              "reads": "product.value.*.productId",
+              "type": "Int!"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "tab",
+    "label": "Content",
+    "sections": [
+      {
+        "label": "Products",
+        "settings": [
+          {
+            "type": "productSet",
+            "label": "Product Set",
+            "id": "product",
+            "entryLabel": "Product",
+            "default": {
+              "type": "manual",
+              "value": []
+            }
+          }
+        ],
+        "typeMeta": {
+          "type": "setSection"
+        }
+      },
+      {
+        "label": "Slider Settings",
+        "settings": [
+          {
+            "type": "boolean",
+            "label": "Enable Slider",
+            "id": "slider_integrate",
+            "default": true
+          }
+        ]
+      },
+      {
+        "label": "Without Slider Settings",
+        "settings": [
+          {
+            "type": "select",
+            "label": "Product Set Show Item",
+            "id": "productShowCount",
+            "default": "4",
+            "typeMeta": {
+              "selectOptions": [
+                {
+                  "label": "1",
+                  "value": "1"
+                },
+                {
+                  "label": "2",
+                  "value": "2"
+                },
+                {
+                  "label": "3",
+                  "value": "3"
+                },
+                {
+                  "label": "4",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          {
+            "type": "select",
+            "label": "Product Set Alignmnet",
+            "id": "productSetAlignment",
+            "default": "flex-start",
+            "typeMeta": {
+              "selectOptions": [
+                {
+                  "label": "Start",
+                  "value": "flex-start"
+                },
+                {
+                  "label": "Center",
+                  "value": "center"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "label": "Product Settings",
+        "settings": [
+          {
+            "type": "visibility",
+            "label": "Button",
+            "id": "button_visibility",
+            "default": "show"
+          },
+          {
+            "type": "visibility",
+            "label": "Title",
+            "id": "title_visibility",
+            "default": "show"
+          },
+          {
+            "type": "visibility",
+            "label": "Price",
+            "id": "price_visibility",
+            "default": "show"
+          },
+          {
+            "type": "boolean",
+            "label": "Text Truncation",
+            "id": "title-widget-text-style",
+            "default": true
+          },
+          {
+            "type": "number",
+            "id": "title-widget-text-style-lines",
+            "label": "Title Truncation",
+            "default": {
+              "value": 1,
+              "type": ""
+            }
+          },
+          {
+            "type": "boolean",
+            "label": "Product Full Width",
+            "id": "product-full-width",
+            "default": false
+          }
+        ]
+      }
+    ]
+  }
+]

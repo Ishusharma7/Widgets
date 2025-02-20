@@ -1,0 +1,14 @@
+{
+  "svgContent": "<!--svg image link here-->",
+  "hrwidthmob": {
+    "value": 100,
+    "type": "px"
+  },
+  "hrwidthdesk": {
+    "value": 200,
+    "type": "px"
+  },
+  "hrheight": {
+    "value": 4
+  }
+}

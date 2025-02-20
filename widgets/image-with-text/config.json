@@ -1,0 +1,44 @@
+{
+  "display": "flex",
+  "overlay-1": "none",
+  "overlay-2": "none",
+  "font-heading-mobile": {
+    "value": 24
+  },
+  "font-heading-desktop": {
+    "value": 36
+  },
+  "font-para-mobile": {
+    "value": 14
+  },
+  "font-para-desktop": {
+    "value": 16
+  },
+  "font-anchor-mobile": {
+    "value": 16
+  },
+  "font-anchor-desktop": {
+    "value": 20
+  },
+  "font-color": "#000000",
+  "products": [
+    {
+      "Collection-name": "BIKE PARTS",
+      "product-name": "aliquip ex commodo consequat",
+      "link": "#",
+      "bg-image": {
+        "src": "",
+        "type": "IMAGE_MANAGER"
+      }
+    },
+    {
+      "Collection-name": "BIKE PARTS",
+      "product-name": "aliquip ex commodo consequat",
+      "link": "#",
+      "bg-image": {
+        "src": "",
+        "type": "IMAGE_MANAGER"
+      }
+    }
+  ]
+}

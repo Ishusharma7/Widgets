@@ -1,0 +1,73 @@
+
+<style>
+    #widget-template-title-{{_.id}}{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: {{margin.top.value}}{{margin.top.type}};
+        margin-right: {{margin.right.value}}{{margin.right.type}};
+        margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+        margin-left: {{margin.left.value}}{{margin.left.type}};
+    }
+    #widget-template-title-{{_.id}} img{
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+        max-width:656px;
+        max-height: 620px;
+        aspect-ratio: 656/620 ;
+    }
+    #widget-template-title-{{_.id}} .text{
+        color: #111;
+        max-width:542px;
+    }
+    #widget-template-title-{{_.id}} .text h2{
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.05;
+        font-family: "Germania One";
+        margin: 35px 0 18px 0;
+        color: #111;
+    }
+    #widget-template-title-{{_.id}} .text p{
+        color: #111;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.35;
+        font-family: "Titillium Web";
+    }
+    @media screen and (min-width: 767px){
+        #widget-template-title-{{_.id}}{
+            flex-direction: {{row-alignment}};
+            justify-content: center;
+            gap: 40px;
+        }
+        #widget-template-title-{{_.id}} img{
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 1024px){
+        #widget-template-title-{{_.id}}{
+            gap: 142px;
+        }
+        #widget-template-title-{{_.id}} .text h2{
+            margin: 0 0 20px 0;
+            font-size: 36px;
+        }
+        #widget-template-title-{{_.id}} .text p{
+            font-size: 22px;
+            line-height: 1.4;
+        }
+    }
+</style>
+    
+    <div id='widget-template-title-{{_.id}}'>
+        <img src="{{custom-image.src}}" alt="{{custom-image-alt}}"  loading="lazy" width="320" height="312"/>
+        <div class="text">
+            <h2>{{heading}}</h2>
+            <p>{{description}}</p>
+        </div>
+    </div>
+

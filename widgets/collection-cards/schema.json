@@ -1,0 +1,47 @@
+[
+  {
+    "type": "array",
+    "label": "Collection Settings",
+    "id": "collection",
+    "defaultCount": 3,
+    "entryLabel": "Icon",
+    "thumbnail": {
+    "type": "image",
+    "valueKey": "imageUrl.src"
+  },
+    "schema": [
+    {
+    "type": "tab",
+    "label": "collection item setting",
+    "id": "sliderSettings",
+    "sections": [
+      {
+        "settings": [
+          {
+            "label": "Image",
+            "type": "imageManager",
+            "id": "imageUrl",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type":"input",
+            "id":"content",
+            "label":"Text",
+            "default":"Sample Text"
+          },
+          {
+            "type": "input",
+            "id": "image-anchor",
+            "label": "image url",
+            "default": ""
+          }
+        ]
+      }
+    ]
+  }
+]
+}
+]

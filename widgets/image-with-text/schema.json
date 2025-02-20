@@ -1,0 +1,187 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "General Settings",
+        "settings": [
+          {
+            "type": "select",
+            "id": "display",
+            "label": "Enable Widget",
+              "default": "flex",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "Yes",
+                "value": "flex"
+              },
+              {
+                "label": "No",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "type": "select",
+            "id": "overlay-1",
+            "label": "Overlay Of First Product",
+              "default": "none",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "true",
+                "value": "block"
+              },
+              {
+                "label": "false",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "type": "select",
+            "id": "overlay-2",
+            "label": "Overlay Of Second Product",
+              "default": "none",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "true",
+                "value": "block"
+              },
+              {
+                "label": "false",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "label": "Heading Size Mobile",
+            "type": "number",
+            "id": "font-heading-mobile",
+            "default": {
+              "value": 24
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+          },
+            {
+              "type":"number",
+              "label":"Heading Size Desktop",
+              "id":"font-heading-desktop",
+              "default": {
+              "value": 36
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"Paragraph Size Mobile",
+              "id":"font-para-mobile",
+              "default": {
+              "value": 14
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"Paragraph Size Desktop",
+              "id":"font-para-desktop",
+              "default": {
+              "value": 16
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"Anchor Size Mobile",
+              "id":"font-anchor-mobile",
+              "default": {
+              "value": 16
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"Anchor Size Desktop",
+              "id":"font-anchor-desktop",
+              "default": {
+              "value": 20
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+                {
+                  "type": "color",
+                  "id": "font-color",
+                  "label": "Font Color",
+                  "default": "#000000"
+                }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Our Features",
+    "id": "products",
+    "defaultCount": 2,
+    "entryLabel": "list-item",
+    "schema": [
+    {
+    "type": "tab",
+    "label": "Our Features",
+    "sections": [
+      {
+        "label": "Text",
+        "settings": [
+          
+          {
+            "type":"input",
+            "id":"Collection-name",
+            "label":"Small-Text",
+            "default":"BIKE PARTS"
+          },
+          {
+            "type":"input",
+            "id":"product-name",
+            "label":"Heading",
+            "default":"aliquip ex commodo consequat"
+          },
+          {
+            "type":"input",
+            "id":"link",
+            "label":"Shop Now Link",
+            "default":"#"
+          },
+          {
+            "label": "Background Image",
+            "type": "imageManager",
+            "id": "bg-image",
+            "default": {
+              "src": "",
+              "type": "IMAGE_MANAGER"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
+}
+]

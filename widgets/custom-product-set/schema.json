@@ -1,0 +1,79 @@
+[
+  {
+    "type": "tab",
+    "label": "title",
+    "sections": [
+      {
+        "label": "Heading",
+        "settings": [
+          {
+            "type": "select",
+            "id": "display",
+            "label": "Enable Widget",
+              "default": "block",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "Yes",
+                "value": "block"
+              },
+              {
+                "label": "No",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "type": "input",
+            "label": "Heading",
+            "id": "heading"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Carousel",
+    "id": "tab",
+    "defaultCount": 2,
+    "entryLabel": "Tab",
+    "schema": [
+      {
+        "type": "tab",
+        "label": "Cards",
+        "sections": [
+          {
+            "label": "Products",
+            "settings": [
+              {
+                "type": "productSet",
+                "label": "Product Set",
+                "id": "product",
+                "entryLabel": "Product",
+                "default": {
+                  "type": "manual",
+                  "value": []
+                }
+              }
+            ],
+            "typeMeta": {
+              "type": "setSection"
+            }
+          },
+          {
+            "label": "Heading",
+            "settings": [
+              {
+                "type": "input",
+                "label": "Heading",
+                "id": "heading"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

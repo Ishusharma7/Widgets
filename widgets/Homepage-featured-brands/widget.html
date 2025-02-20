@@ -1,0 +1,36 @@
+{{#if enableSection '==' 'show'}}
+<div class="nhp-tr-slider home-featured-brands">
+    <div class="container">
+        <div class="slider-heading-box">
+            <h2>{{Section-heading}}</h2>
+            <div class="slider-show-all">
+               {{#if see-all}} <a href="/{{see-all}}/" class="sm-none">see all ></a>{{/if}}
+                {{#if all-brand}}<a href="/{{all-brand}}/" class="md-none">All brands ></a>{{/if}}
+            </div>
+        </div>
+        <div class="tr-slider-row">
+            {{#each featuredbrand}}
+            <div class="nhp-tr-col">
+                <div class="nhp-slider-content">
+                    <div class="slider-img-box">
+                        {{#if image-anchor}}
+                        <a href="{{image-anchor}}">
+                        {{/if}}
+                            {{#if imageUrl.src}}
+                            <img src="{{imageUrl.src}}" alt="{{img-alt}}" loading="lazy" />
+                            {{/if}}
+                        {{#if image-anchor}}
+                        </a>
+                        {{/if}}
+                    </div>
+                    <div class="slider-text-box">
+                        {{#if heading}}<h3><a href="/libbey/">{{heading}}</a></h3>{{/if}}
+                        {{#if text}}<p>{{text}}</p>{{/if}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{/if}}

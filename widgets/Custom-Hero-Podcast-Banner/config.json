@@ -1,0 +1,75 @@
+{
+  "heading": "Heading",
+  "paragraph": "Para",
+  "button-text": "Listen All Episodes",
+  "background_color": "#ffffff",
+  "color_heading": "#000000",
+  "color_paragraph": "#000000",
+  "color_button": "#000000",
+  "background_colors": "linear-gradient(225deg, #03EAD9 0%, #0A81F4 100%)",
+  "background_image_mobile": {
+    "src": "",
+    "type": "IMAGE_MANAGER"
+  },
+  "background_image_desktop": {
+    "src": "",
+    "type": "IMAGE_MANAGER"
+  },
+  "height": "banner-medium",
+  "heading-tag": "h1",
+  "arrow": "none",
+  "font_size_heading_mobile": {
+    "value": 16,
+    "type": "px"
+  },
+  "font_size_heading_desktop": {
+    "value": 64,
+    "type": "px"
+  },
+  "font_size_button_mobile": {
+    "value": 16,
+    "type": "px"
+  },
+  "font_size_button_desktop": {
+    "value": 48,
+    "type": "px"
+  },
+  "align_item": "center",
+  "text-align": "center",
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "8",
+      "type": "px"
+    },
+    "right": {
+      "value": "24",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "8",
+      "type": "px"
+    },
+    "left": {
+      "value": "24",
+      "type": "px"
+    }
+  }
+}

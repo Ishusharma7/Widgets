@@ -1,0 +1,32 @@
+{
+  "background_color": "#000000",
+  "podcastcard": [
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "post-card-subtext": "SALES ENGINEER",
+      "post-card-heading": "Ep 02 - Chef Coco Reinarhz"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "post-card-subtext": "SALES ENGINEER",
+      "post-card-heading": "Ep 02 - Chef Coco Reinarhz"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "post-card-subtext": "SALES ENGINEER",
+      "post-card-heading": "Ep 02 - Chef Coco Reinarhz"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Banner Settings",
+        "settings": [
+          {
+            "type": "input",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Heading"
+          },
+          {
+            "type": "input",
+            "id": "paragraph",
+            "label": "Paragraph",
+            "default": "Para"
+          },
+          {
+            "type": "input",
+            "id": "button-text",
+            "label": "Button-Text",
+            "default": "Listen All Episodes"
+          },
+          {
+            "type": "input",
+            "id": "button-link",
+            "label": "Button-Link",
+            "default": ""
+          },
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "color_heading",
+            "label": "Heading Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "color_paragraph",
+            "label": "Paragraph Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "color_button",
+            "label": "Button Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "background_colors",
+            "label": "Button Background Color",
+            "default": "linear-gradient(225deg, #03EAD9 0%, #0A81F4 100%)"
+          },
+          {
+            "label": "Mobile Background Image",
+            "type": "imageManager",
+            "id": "background_image_mobile",
+            "default": {
+              "src": "",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "label": "Desktop Background Image",
+            "type": "imageManager",
+            "id": "background_image_desktop",
+            "default": {
+              "src": "",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "label": "Height of Banner",
+            "type":"select",
+            "id":"height",
+            "default": "banner-medium",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "small",
+                "value": "banner-small"
+              },
+              {
+                "label": "medium",
+                "value": "banner-medium"
+              },
+              {
+                "label": "large",
+                "value": "banner-large"
+              }
+            ]
+          }
+          },
+          {
+            "type": "select",
+            "id": "heading-tag",
+            "label": "Heading Tag",
+              "default": "h1",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "h1",
+                "value": "h1"
+              },
+              {
+                "label": "h2",
+                "value": "h2"
+              }
+            ]
+          }
+          },
+          {
+            "type": "select",
+            "id": "arrow",
+            "label": "visibility of arrow",
+              "default": "none",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "true",
+                "value": "flex"
+              },
+              {
+                "label": "false",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "label": "Heading Font-Size Mobile",
+            "type":"number",
+            "id":"font_size_heading_mobile",
+            "default": {
+            "value": 16,
+            "type": "px"
+          },
+          "typeMeta": {
+            "parseType": "integer"
+          }
+          },
+          {
+            "label": "Heading Font-Size Desktop",
+            "type":"number",
+            "id":"font_size_heading_desktop",
+            "default": {
+            "value": 64,
+            "type": "px"
+          },
+          "typeMeta": {
+            "parseType": "integer"
+          }
+          },
+          {
+            "label": "Button Font-Size Mobile",
+            "type":"number",
+            "id":"font_size_button_mobile",
+            "default": {
+            "value": 16,
+            "type": "px"
+          },
+          "typeMeta": {
+            "parseType": "integer"
+          }
+          },
+          {
+            "label": "Button Font-Size Desktop",
+            "type":"number",
+            "id":"font_size_button_desktop",
+            "default": {
+            "value": 48,
+            "type": "px"
+          },
+          "typeMeta": {
+            "parseType": "integer"
+          }
+          },
+          {
+            "type": "select",
+            "id": "align_item",
+            "label": "Align Item",
+              "default": "center",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "Start",
+                "value": "start"
+              },
+              {
+                "label": "Center",
+                "value": "center"
+              },
+              {
+                "label": "End",
+                "value": "end"
+              }
+            ]
+          }
+          },
+          {
+            "type": "select",
+            "id": "text-align",
+            "label": "text Align",
+              "default": "center",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "left",
+                "value": "left"
+              },
+              {
+                "label": "Center",
+                "value": "center"
+              },
+              {
+                "label": "right",
+                "value": "right"
+              }
+            ]
+          }
+          },
+          {
+            "type": "boxModel",
+            "label": "Margin",
+            "id": "margin",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Padding",
+            "id": "padding",
+            "default": {
+              "top": {
+                "value": "8",
+                "type": "px"
+              },
+              "right": {
+                "value": "24",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "8",
+                "type": "px"
+              },
+              "left": {
+                "value": "24",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

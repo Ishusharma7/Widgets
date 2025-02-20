@@ -1,0 +1,197 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "svg image settings",
+        "settings": [
+          {
+            "type": "select",
+            "id": "display",
+            "label": "Enable Widget",
+              "default": "block",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "Yes",
+                "value": "block"
+              },
+              {
+                "label": "No",
+                "value": "none"
+              }
+            ]
+          }
+          },
+          {
+            "id": "svgContent",
+            "label": "HTML Code",
+            "default": "<!--svg image link here-->",
+            "type": "code",
+            "typeMeta": {
+              "language": "html",
+              "placeholder": "Insert HTML code here"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Text-settings",
+        "settings": [
+          {
+            "label": "Background Image",
+            "type": "imageManager",
+            "id": "bg-image",
+            "default": {
+              "src": "",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type":"input",
+            "label":"Heading",
+            "id":"heading",
+            "default":"We Are Die Werks Moto"
+          },
+          {
+            "type":"input",
+            "label":"Text under heading",
+            "id":"text",
+            "default":"Welcome to Die Werks, where passion meets precision, and friendship fuels innovation."
+          },
+          {
+            "type":"input",
+            "label":"Button Text",
+            "id":"anchor-text",
+            "default":"LEARN MORE ABOUT US"
+          },
+          {
+            "type":"input",
+            "label":"Button Link",
+            "id":"link",
+            "default":"/contactus/"
+          }
+        ]
+      },
+      {
+        "label": "General Font Settings",
+        "settings": [
+          {
+            "label": "heading size mobile",
+            "type": "number",
+            "id": "font-heading-mobile",
+            "default": {
+              "value": 48
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+          },
+            {
+              "type":"number",
+              "label":"heading size desktop",
+              "id":"font-heading-desktop",
+              "default": {
+              "value": 128
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"paragraph size mobile",
+              "id":"font-para-mobile",
+              "default": {
+              "value": 18
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"paragraph size desktop",
+              "id":"font-para-desktop",
+              "default": {
+              "value": 20
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"anchor size mobile",
+              "id":"font-anchor-mobile",
+              "default": {
+              "value": 16
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"anchor size desktop",
+              "id":"font-anchor-desktop",
+              "default": {
+              "value": 16
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"list size desktop",
+              "id":"font-list-desktop",
+              "default": {
+              "value": 16
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            },
+            {
+              "type":"number",
+              "label":"list size desktop",
+              "id":"font-list-desktop",
+              "default": {
+              "value": 22
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+            }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Our Features",
+    "id": "Features",
+    "defaultCount": 3,
+    "entryLabel": "list-item",
+    "schema": [
+    {
+    "type": "tab",
+    "label": "Our Features",
+    "sections": [
+      {
+        "settings": [
+          {
+            "type": "input",
+            "id": "feature",
+            "label": "Add Text",
+            "default": "Originated in Ogden, Utah in 2020"
+          }
+        ]
+      }
+    ]
+  }
+]
+}
+]

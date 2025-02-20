@@ -1,0 +1,25 @@
+{
+  "collection": [
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+        "type": "IMAGE_MANAGER"
+      },
+      "content": "Sample Text"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+        "type": "IMAGE_MANAGER"
+      },
+      "content": "Sample Text"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+        "type": "IMAGE_MANAGER"
+      },
+      "content": "Sample Text"
+    }
+  ]
+}

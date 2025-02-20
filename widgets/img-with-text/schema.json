@@ -1,0 +1,86 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Thumbnail Image",
+        "settings": [
+          {
+            "type": "select",
+            "id": "row-alignment",
+            "label": "Image on left",
+              "default": "row",
+            "typeMeta": {
+            "selectOptions": [
+              {
+                "label": "true",
+                "value": "row"
+              },
+              {
+                "label": "false",
+                "value": "row-reverse"
+              }
+            ]
+          }
+          },
+          {
+            "type": "imageManager",
+            "label": "Image",
+            "id": "custom-image",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-7w348h8ysj/images/stencil/original/image-manager/21-dsc8118.jpg?t=1732053077",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "custom-image-alt",
+            "label": "Image Alt Text",
+            "default": "Alt Text"
+          }
+        ]
+      },
+      {
+        "label": "Spacing and Text Setting",
+        "settings": [
+          {
+            "type": "input",
+            "id": "heading",
+            "label": "Heading Of Section",
+            "default": "Grassroots and Good Timest"
+          },
+          {
+            "type": "input",
+            "id": "description",
+            "label": "Description Of Section",
+            "default": "Established by a group of friends united by their love for motorcycles, we turned our weekend rides and garage projects into a venture dedicated to crafting top-quality parts and accessories that embody the rider lifestyle."
+          },
+          {
+            "type": "boxModel",
+            "label": "Margin",
+            "id": "margin",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

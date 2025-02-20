@@ -1,0 +1,93 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Section Settings",
+        "settings": [
+          {
+            "type": "visibility",
+            "label": "Section Visibility",
+            "id": "enableSection",
+            "default": "show"
+          },
+          {
+            "type": "input",
+            "id": "Section-heading",
+            "label": "Heading Of Section",
+            "default": "Featured Brands"
+          },
+          {
+            "type": "input",
+            "id": "see-all",
+            "label": "Link of see all button",
+            "default": "brands"
+          },
+          {
+            "type": "input",
+            "id": "all-brand",
+            "label": "Link of all brands button",
+            "default": "brands"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Social Icon",
+    "id": "featuredbrand",
+    "defaultCount": 4,
+    "entryLabel": "Icon-settings",
+    "thumbnail": {
+    "type": "image",
+    "valueKey": "imageUrl.src"
+  },
+    "schema": [
+    {
+    "type": "tab",
+    "label": "Products-settings",
+    "sections": [
+      {
+        "settings": [
+          {
+            "label": "Image",
+            "type": "imageManager",
+            "id": "imageUrl",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-tksoguma9/images/stencil/original/image-manager/le-creuset-marketing-image.jpg?t=1708318016",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "image-anchor",
+            "label": "Image Anchor",
+            "default": "#"
+          },
+          {
+            "label": "image Alt",
+            "type":"input",
+            "id":"img-alt",
+            "default": ""
+          },
+          {
+            "label": "Brand Heading",
+            "type":"input",
+            "id":"heading",
+            "default": "lorem ipsum dolor sit amet"
+          },
+          {
+            "label": "Brand Subtext",
+            "type":"input",
+            "id":"text",
+            "default": "lorem ipsum"
+          }
+        ]
+      }
+    ]
+  }
+]
+}
+]

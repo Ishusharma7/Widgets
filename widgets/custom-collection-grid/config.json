@@ -1,0 +1,15 @@
+{
+  "display": "flex",
+  "heading": "Our products",
+  "linktodeal": "/all-collection",
+  "collections": [
+    {
+      "categoryName": "werks edition",
+      "categoryUrl": "/url-to-category",
+      "categoryImageUrl": {
+        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+        "type": "IMAGE_MANAGER"
+      }
+    }
+  ]
+}

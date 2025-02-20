@@ -1,0 +1,43 @@
+[
+  {
+  "type": "tab",
+  "label": "Design",
+  "sections": [
+    {
+      "label": "Thumbnail Image",
+      "settings": [
+        {
+          "type": "imageManager",
+          "label": "Image",
+          "id": "custom-thumbnail-image",
+          "default": {
+            "src": "https://cdn11.bigcommerce.com/s-2fugmxabv8/images/stencil/original/image-manager/desktop-version.png?t=1729161995s",
+            "type": "IMAGE_MANAGER"
+          }
+        },
+        {
+          "type": "input",
+          "id": "custom-thumbnail-image-alt",
+          "label": "Image Alt Text",
+          "default": "Alt Text"
+        }
+      ]
+    },
+    {
+      "label": "Video",
+      "settings": [
+        {
+          "type": "code",
+          "id": "custom-video-iframe",
+          "label": "Add Video Iframe",
+          "default": "https://www.youtube.com/embed/K6ffSZcNAn0?si=QToiRJJgaPiOC8gs",
+          "typeMeta": {
+            "language": "html",
+            "placeholder": "Add Vimeo Iframe"
+          }
+        }
+      ]
+      }
+      ]
+    }
+  ]

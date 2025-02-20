@@ -1,0 +1,44 @@
+{
+  "display": "block",
+  "svgContent": "<!--svg image link here-->",
+  "bg-image": {
+    "src": "",
+    "type": "IMAGE_MANAGER"
+  },
+  "heading": "We Are Die Werks Moto",
+  "text": "Welcome to Die Werks, where passion meets precision, and friendship fuels innovation.",
+  "anchor-text": "LEARN MORE ABOUT US",
+  "link": "/contactus/",
+  "font-heading-mobile": {
+    "value": 48
+  },
+  "font-heading-desktop": {
+    "value": 128
+  },
+  "font-para-mobile": {
+    "value": 18
+  },
+  "font-para-desktop": {
+    "value": 20
+  },
+  "font-anchor-mobile": {
+    "value": 16
+  },
+  "font-anchor-desktop": {
+    "value": 16
+  },
+  "font-list-desktop": {
+    "value": 22
+  },
+  "Features": [
+    {
+      "feature": "Originated in Ogden, Utah in 2020"
+    },
+    {
+      "feature": "Originated in Ogden, Utah in 2020"
+    },
+    {
+      "feature": "Originated in Ogden, Utah in 2020"
+    }
+  ]
+}

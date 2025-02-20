@@ -1,0 +1,114 @@
+
+<style>
+    .hero-banner-{{_.id}} {
+        background: {{background_color}};
+        text-align: {{text-align}};
+        margin-top: {{margin.top.value}}{{margin.top.type}};
+        margin-right: {{margin.right.value}}{{margin.right.type}};
+        margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+        margin-left: {{margin.left.value}}{{margin.left.type}};
+        background-image: url('{{background_image_mobile.src}}');
+        background-size: cover;
+        background-position: center;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        padding: 0 16px;
+    }
+    .hero-banner-{{_.id}} h1, .hero-banner-{{_.id}} h2{
+        color: {{color_heading}};
+        font-weight:700;
+        font-size:{{font_size_heading_mobile.value}}px;
+        line-height:1.3;
+        margin:0;
+    } 
+    .hero-banner-{{_.id}} p{
+        color: {{color_paragraph}};
+        margin:0;
+        line-height:1.5;
+        font-size:16px;
+    } 
+    .hero-banner-{{_.id}} a{
+        display:flex;
+        padding: 12px 24px;
+        width: max-content;
+        gap:8px;
+        background:{{background_colors}};
+        color: {{color_button}};
+        text-decoration: none;
+        font-size:{{font_size_button_mobile.value}}px;
+        margin-top:24px;
+        align-items: center;
+        font-weight:600;
+        line-height:1.5;
+        border-radius:3px;
+    }
+    .hero-banner-{{_.id}} a span{
+        display: {{arrow}};
+    }
+    .hero-banner-wrapper{
+        max-width: 726px;
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        align-items:{{align_item}};
+    }
+    .banner-small{
+        height: auto;
+        padding: 0 16px;
+    }
+    .banner-medium{
+        height:507px;
+        padding: 0 16px;
+    }
+    .banner-large{
+        height:713px;
+    }
+@media screen and (min-width: 768px) {
+.hero-banner-{{_.id}} {
+background-image: url('{{background_image_desktop.src}}');
+padding-top: {{padding.top.value}}{{padding.top.type}};
+padding-right: {{padding.right.value}}{{padding.right.type}};
+padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+padding-left: {{padding.left.value}}{{padding.left.type}};
+}
+.hero-banner-{{_.id}} p{
+    font-size: 18px;
+}
+.hero-banner-{{_.id}} h1, .hero-banner-{{_.id}} h2{
+    font-size:{{font_size_heading_desktop.value}}px;
+}
+.hero-banner-{{_.id}} a{
+    font-size:{{font_size_button_desktop.value}}px;
+    padding:20px 40px;
+    margin-top: 12px;
+}
+.hero-banner-wrapper{
+    gap:24px;
+}
+.banner-large{
+    height:620px;
+}
+.banner-medium{
+    height:538px;
+}
+}
+</style>
+
+<div class="hero-banner-{{_.id}}  {{height}} ">
+    <div class="hero-banner-wrapper">
+    {{#if heading}}
+    <{{heading-tag}}>{{heading}}</{{heading-tag}}>
+    {{/if}}
+    {{#if paragraph}}
+    <p>{{paragraph}}</p>
+    {{/if}}
+    {{#and button-text button-link}}
+    <a href="{{button-link}}">{{button-text}}<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7929 6.79289C15.1834 6.40237 15.8166 6.40237 16.2071 6.79289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L16.2071 17.2071C15.8166 17.5976 15.1834 17.5976 14.7929 17.2071C14.4024 16.8166 14.4024 16.1834 14.7929 15.7929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L14.7929 8.20711C14.4024 7.81658 14.4024 7.18342 14.7929 6.79289Z" fill="white"/>
+        </svg></span></a>
+    {{/and}}
+</div>
+</div>
+

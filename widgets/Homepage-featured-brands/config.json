@@ -1,0 +1,44 @@
+{
+  "enableSection": "show",
+  "Section-heading": "Featured Brands",
+  "see-all": "brands",
+  "all-brand": "brands",
+  "featuredbrand": [
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-tksoguma9/images/stencil/original/image-manager/le-creuset-marketing-image.jpg?t=1708318016",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "heading": "lorem ipsum dolor sit amet",
+      "text": "lorem ipsum"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-tksoguma9/images/stencil/original/image-manager/le-creuset-marketing-image.jpg?t=1708318016",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "heading": "lorem ipsum dolor sit amet",
+      "text": "lorem ipsum"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-tksoguma9/images/stencil/original/image-manager/le-creuset-marketing-image.jpg?t=1708318016",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "heading": "lorem ipsum dolor sit amet",
+      "text": "lorem ipsum"
+    },
+    {
+      "imageUrl": {
+        "src": "https://cdn11.bigcommerce.com/s-tksoguma9/images/stencil/original/image-manager/le-creuset-marketing-image.jpg?t=1708318016",
+        "type": "IMAGE_MANAGER"
+      },
+      "image-anchor": "#",
+      "heading": "lorem ipsum dolor sit amet",
+      "text": "lorem ipsum"
+    }
+  ]
+}

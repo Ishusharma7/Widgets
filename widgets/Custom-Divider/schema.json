@@ -1,0 +1,63 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "svg image settings",
+        "settings": [
+          {
+            "id": "svgContent",
+            "label": "HTML Code",
+            "default": "<!--svg image link here-->",
+            "type": "code",
+            "typeMeta": {
+              "language": "html",
+              "placeholder": "Insert HTML code here"
+            }
+          }
+        ]
+      },
+      {
+        "label": "Horizontal Line Styling",
+        "settings": [
+          {
+            "label": "width to decrease in mobile",
+            "type": "number",
+            "id": "hrwidthmob",
+            "default": {
+              "value": 100,
+              "type": "px"
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+          },
+          {
+            "label": "width to decrease in desktop",
+            "type": "number",
+            "id": "hrwidthdesk",
+            "default": {
+              "value": 200,
+              "type": "px"
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+          },
+          {
+            "label": "HR Height Pixels",
+            "type": "number",
+            "id": "hrheight",
+            "default": {
+              "value": 4
+            },
+            "typeMeta": {
+              "parseType": "integer"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

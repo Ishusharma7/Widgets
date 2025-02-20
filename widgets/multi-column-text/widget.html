@@ -1,0 +1,95 @@
+<style>
+    #bc-simple-text-{{_.id}} * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    #bc-simple-text-{{_.id}} {
+        padding: 33px 0 50px 0;
+        width: 100%;
+        display:{{display}};
+    }
+    #bc-simple-text-{{_.id}} ul {
+        list-style-type: none;
+        display: grid;
+        justify-content: center;
+        row-gap: 50px;
+        margin: 0;
+    }
+    #bc-simple-text-{{_.id}} ul li {
+        display: grid;
+        gap: 15px;
+        max-width: 385px;
+    }
+    #bc-simple-text-{{_.id}} ul li .deep-blue-color {
+        color: #00819E;
+    }
+    #bc-simple-text-{{_.id}} ul li h2 {
+        font-size: {{font-heading-mobile.value}}px;
+        font-weight: 400;
+        line-height: 1;
+        color: #111;
+    }
+    #bc-simple-text-{{_.id}} ul li p {
+        font-size: {{font-para-mobile.value}}px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #111;
+    }
+    #bc-simple-text-{{_.id}} ul li a {
+        font-size: {{font-anchor-mobile.value}}px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #00819E;
+        text-underline-offset: 8px;
+    }
+    #bc-simple-text-{{_.id}} ul li a:hover {
+        color: #00D1FF;
+    }
+    @media screen and (min-width: 767px) {
+        #bc-simple-text-{{_.id}} {
+            padding: 75px 0 100px 0;
+        }
+        #bc-simple-text-{{_.id}} ul {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 92px;
+        }
+        #bc-simple-text-{{_.id}} ul li {
+            gap: 20px;
+            margin: 0 auto;
+        }
+        #bc-simple-text-{{_.id}} ul li h2 {
+            font-size: {{font-heading-desktop.value}}px;
+        }
+        #bc-simple-text-{{_.id}} ul li p {
+            font-size: {{font-para-desktop.value}}px;
+        }
+        #bc-simple-text-{{_.id}} ul li a {
+            font-size: {{font-anchor-desktop.value}}px;
+            text-transform: capitalize;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        #bc-simple-text-{{_.id}} ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
+
+<section>
+    <div id="bc-simple-text-{{_.id}}">
+        <ul>
+            {{#each items}}
+            <li>
+                <h2>
+                    {{{item-1}}}
+                </h2>
+                <p>
+                    {{{item-2}}}
+                </p> 
+                <a href="{{button-link}}">{{button-text}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>

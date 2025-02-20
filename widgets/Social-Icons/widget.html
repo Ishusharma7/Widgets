@@ -1,0 +1,51 @@
+
+<style>
+    .bc-simple-text-{{_.id}} {
+        background: {{background_color}};
+        padding-top: {{padding.top.value}}{{padding.top.type}};
+        padding-right: {{padding.right.value}}{{padding.right.type}};
+        padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+        padding-left: {{padding.left.value}}{{padding.left.type}};
+        margin-top: {{margin.top.value}}{{margin.top.type}};
+        margin-right: {{margin.right.value}}{{margin.right.type}};
+        margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+        margin-left: {{margin.left.value}}{{margin.left.type}};
+    }
+    .social-icon-container li{
+        list-style-type: none;
+    }
+    .social-icon-container{
+        display:flex;
+        gap:16px;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+    }
+    .social-icon-container li a img{
+        width: 100%;
+    }
+@media screen and (min-width: 768px) {
+.social-icon-container{
+    gap:32px;
+}
+.social-icon-container li a img{
+        width: 100%;
+    }
+}
+</style>
+
+<div class="bc-simple-text-{{_.id}}">
+    <ul class="social-icon-container">
+    {{#each socialicon}}
+    <li>
+        {{#if image-anchor}}
+        <a href="{{image-anchor}}">{{/if}}
+            <img src="{{imageUrl.src}}" alt="Social Icon" width="{{img-width.value}}"  height="{{img-height.value}}" />
+            {{#if image-anchor}}
+        </a>    
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>
+</div>

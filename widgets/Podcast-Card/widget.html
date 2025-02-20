@@ -1,0 +1,120 @@
+
+<style>
+    .bc-simple-text-{{_.id}} {
+        background: {{background_color}};
+    }
+    .bc-simple-text-{{_.id}} .load-more{
+        display: block;
+        font-size: 1.28571rem;
+        color: #03ead9;
+        border: 1px solid #03ead9;
+        padding: 11px 84px 12px 77px;
+        margin: auto;
+        margin-top: 64px;
+        font-weight: 600;
+        background: none;
+    }
+    .bc-simple-text-{{_.id}} .load-more:hover{
+        background-color: #03ead9;
+        color: black;
+    }
+    .podcast-card-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 32px;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 1170px;
+        padding: 0 16px;
+    }
+    .podcast-card-container li{
+        padding: 20px 16px 32px 16px;
+        list-style-type: none;   
+        background-color: #1C1C1C;  
+        border-radius: 10px;
+    }
+    .bc-simple-text-{{_.id}} ul li article a h3{
+        margin: 0;
+        color: #ffffff;
+        font-weight: 600;
+        line-height: 1.25; 
+        letter-spacing: -0.6px;
+        font-size: 24px;
+    }
+    .bc-simple-text-{{_.id}} ul li article a p{
+        margin: 24px 0 4px 0;
+        color: #fff;
+        line-height: 1.4;
+    }
+    .podcast-card-container img{
+        width: 100%;
+        aspect-ratio: 320/300;
+    }
+    .bc-simple-text-{{_.id}} ul li article a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .podcast-card-container li:nth-child(n + 7){
+        display: none;
+    }
+@media screen and (min-width: 767px) {
+    .bc-simple-text-{{_.id}} {
+        padding-bottom:36px;
+    }
+    .podcast-card-container{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 45px;
+        column-gap: 30px;
+    }
+    .podcast-card-container li{
+        padding: 20px 20px 35px 20px;
+        max-width: 370px;
+    }
+    .bc-simple-text-{{_.id}} .load-more{
+        margin-top: 75px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .podcast-card-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+</style>
+
+<div class="bc-simple-text-{{_.id}}">
+    <ul class="podcast-card-container">
+    {{#each podcastcard}}
+    <li>
+        <article>
+            <a href="{{image-anchor}}" target="_blank">
+                <img src="{{imageUrl.src}}" alt="podcast-card" loading="lazy" />
+                <p>{{post-card-subtext}}</p>
+                <h3>{{post-card-heading}}</h3>
+            </a>
+        </article>
+    </li>
+    {{/each}}
+</ul>
+{{#if podcastcard.length '>' '6'}}
+<button class="load-more">Load More</button>
+{{/if}}
+</div>
+<script>
+    let currentArticles = 6; 
+    const articlesShow = 6;  
+    const load_button = document.querySelector('.bc-simple-text-{{_.id}} .load-more');
+    load_button.addEventListener('click', function() {
+        let articles = document.querySelectorAll('.podcast-card-container li');
+        let totalArticles = articles.length; 
+        for (let i = currentArticles; i < currentArticles + articlesShow; i++) {
+            if (articles[i]) {
+                articles[i].style.display = 'block';
+            }
+        }
+        currentArticles += articlesShow;
+        if (currentArticles >= totalArticles) {
+            load_button.style.display = 'none';
+        }
+    });
+  </script>
+  

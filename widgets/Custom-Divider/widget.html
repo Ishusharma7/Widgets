@@ -1,0 +1,35 @@
+
+<style>
+        .bc-simple-text-{{_.id}} {
+            display:flex;
+            align-items:center;
+        }
+        .bc-simple-text-{{_.id}} svg{
+            width: 22px;
+            height: 35px;
+            @media only screen and (min-width: 768px) {
+                width: 30px;
+                height: 50px;
+            }
+        }
+        .bc-simple-text-{{_.id}} hr{
+            height: {{hrheight.value}}px;
+            width:calc(100% - {{hrwidthmob.value}}px);
+            @media only screen and (min-width: 768px) {
+                width:calc(100% - {{hrwidthdesk.value}}px); 
+            }
+            margin: 0;
+            margin-left: auto;
+            border: none;
+            background: linear-gradient(181deg, #FF0090 0%, #00D1FF 100%);
+        }
+    </style>
+    {{#if svgContent}}
+    <div class="bc-simple-text-{{_.id}}">
+            {{{svgContent}}} 
+            {{/if}}          
+        <hr>
+        {{#if svgContent}}
+    </div>
+    {{/if}}
+

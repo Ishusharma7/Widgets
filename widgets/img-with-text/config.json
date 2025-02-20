@@ -1,0 +1,28 @@
+{
+  "row-alignment": "row",
+  "custom-image": {
+    "src": "https://cdn11.bigcommerce.com/s-7w348h8ysj/images/stencil/original/image-manager/21-dsc8118.jpg?t=1732053077",
+    "type": "IMAGE_MANAGER"
+  },
+  "custom-image-alt": "Alt Text",
+  "heading": "Grassroots and Good Timest",
+  "description": "Established by a group of friends united by their love for motorcycles, we turned our weekend rides and garage projects into a venture dedicated to crafting top-quality parts and accessories that embody the rider lifestyle.",
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  }
+}

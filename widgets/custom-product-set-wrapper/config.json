@@ -1,0 +1,17 @@
+{
+  "product": {
+    "type": "manual",
+    "value": []
+  },
+  "slider_integrate": true,
+  "productShowCount": "4",
+  "productSetAlignment": "flex-start",
+  "button_visibility": "show",
+  "title_visibility": "show",
+  "price_visibility": "show",
+  "title-widget-text-style": true,
+  "title-widget-text-style-lines": {
+    "value": 1,
+    "type": ""
+  }
+}

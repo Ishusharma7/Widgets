@@ -1,0 +1,70 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "wrapper-configration",
+        "settings": [
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#000000"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "array",
+    "label": "Podcast Card",
+    "id": "podcastcard",
+    "defaultCount": 3,
+    "entryLabel": "Icon",
+    "thumbnail": {
+    "type": "image",
+    "valueKey": "imageUrl.src"
+  },
+    "schema": [
+    {
+    "type": "tab",
+    "label": "Podcast Card",
+    "id": "sliderSettings",
+    "sections": [
+      {
+        "settings": [
+          {
+            "label": "Image",
+            "type": "imageManager",
+            "id": "imageUrl",
+            "default": {
+              "src": "https://cdn11.bigcommerce.com/s-bjqt1yp5q3/images/stencil/1280w/carousel/1/stencil-hero-01.jpg?c=1",
+              "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "image-anchor",
+            "label": "Podcast url",
+            "default": "#"
+          },
+          {
+            "type":"input",
+            "id":"post-card-subtext",
+            "label":"Subtext",
+            "default":"SALES ENGINEER"
+          },
+          {
+            "type":"input",
+            "id":"post-card-heading",
+            "label":"Subtext",
+            "default":"Ep 02 - Chef Coco Reinarhz"
+          }
+        ]
+      }
+    ]
+  }
+]
+}
+]

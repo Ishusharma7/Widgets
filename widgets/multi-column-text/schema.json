@@ -1,0 +1,142 @@
+[
+  {
+      "type": "tab",
+      "label": "Design",
+      "sections": [
+          {
+              "label": "General Font Settings",
+              "settings": [
+                {
+                    "type": "select",
+                    "id": "display",
+                    "label": "Enable Widget",
+                      "default": "block",
+                    "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Yes",
+                        "value": "block"
+                      },
+                      {
+                        "label": "No",
+                        "value": "none"
+                      }
+                    ]
+                  }
+                  },
+                  {
+                      "label": "heading size mobile",
+                      "type": "number",
+                      "id": "font-heading-mobile",
+                      "default": {
+                          "value": 28
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Heading Size Desktop",
+                      "id": "font-heading-desktop",
+                      "default": {
+                          "value": 36
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Paragraph Size Mobile",
+                      "id": "font-para-mobile",
+                      "default": {
+                          "value": 18
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Paragraph Size Desktop",
+                      "id": "font-para-desktop",
+                      "default": {
+                          "value": 20
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Anchor Size Mobile",
+                      "id": "font-anchor-mobile",
+                      "default": {
+                          "value": 20
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Anchor Size Desktop",
+                      "id": "font-anchor-desktop",
+                      "default": {
+                          "value": 20
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "type": "array",
+      "label": "Our Features",
+      "id": "items",
+      "defaultCount": 3,
+      "entryLabel": "list-item",
+      "schema": [
+          {
+              "type": "tab",
+              "label": "Our Features",
+              "sections": [
+                  {
+                      "settings": [
+                          {
+                              "id": "item-1",
+                              "label": "Heading",
+                              "default": "You’ve got <span class='deep-blue-color'>Questions</span>, We’ve got <span class='deep-blue-color'>Answers</span>",
+                              "type": "text",
+                              "placeholder": "Insert Heading here"
+                          },
+                          {
+                              "id": "item-2",
+                              "label": "Sub Heading",
+                              "default": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                              "type": "text",
+                              "placeholder": "Insert Sub Heading here"
+                          },
+                          {
+                              "type": "input",
+                              "id": "button-text",
+                              "label": "Button Text",
+                              "default": "Shipping"
+                          },
+                          {
+                              "type": "input",
+                              "id": "button-link",
+                              "label": "Button Link",
+                              "default": "#"
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+]

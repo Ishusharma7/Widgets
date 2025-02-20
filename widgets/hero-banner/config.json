@@ -1,0 +1,88 @@
+{
+  "title": "Hero Banner Title",
+  "subtitle": "Add a description for this hero banner. This is a great place to highlight a promotion.",
+  "buttonText": "Shop now",
+  "initial_subtitle": "All new",
+  "display": "flex",
+  "contentAlignment": {
+    "horizontal": "left"
+  },
+  "imageUrl": {
+    "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+    "type": "IMAGE_MANAGER"
+  },
+  "containerHeight": "500px",
+  "imageFit": "fill",
+  "imageAlignment": {
+    "horizontal": "center",
+    "vertical": "middle"
+  },
+  "imageOpacity": 100,
+  "initialTitleVisible": "show",
+  "titleVisible": "show",
+  "titleStyle": "default",
+  "titleFontFamily": "Germania One, Arial, Helvetica, sans-serif",
+  "titleFontWeight": "400",
+  "TitleTextColor": "#444444",
+  "titleFontSize": {
+    "value": 36,
+    "type": "px"
+  },
+  "titleFontSizeMobile": {
+    "value": 22,
+    "type": "px"
+  },
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "30",
+      "type": "px"
+    },
+    "left": {
+      "value": "20",
+      "type": "px"
+    }
+  },
+  "descriptionVisible": "show",
+  "descriptionStyle": "default",
+  "descriptionFontFamily": "Titillium Web, Arial, Helvetica, sans-serif",
+  "descriptionFontWeight": "400",
+  "descriptionFontSize": {
+    "value": 21,
+    "type": "px"
+  },
+  "textColor": "#444444",
+  "descriptionFontSizeMobile": {
+    "value": 18,
+    "type": "px"
+  },
+  "buttonVisible": "show",
+  "buttonFont": "default",
+  "button-text-color": "#ffffff",
+  "buttonFontFamily": "Titillium Web, Arial, Helvetica, sans-serif"
+}

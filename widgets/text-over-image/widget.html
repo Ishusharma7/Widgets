@@ -1,0 +1,156 @@
+<style>
+        #bc-simple-text-{{_.id}} *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-image:linear-gradient(90deg, #00D1FF 0%, #FF0090 100%) 1;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+        #bc-simple-text-{{_.id}}{
+            display: {{display}};
+            background-image: url('{{bg-image.src}}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+            padding:35px 23px;
+            position:relative;
+        }
+        #bc-simple-text-{{_.id}}::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            background: #081436;
+            opacity: 0.60;
+        }
+        #bc-simple-text-{{_.id}} .wrapper{
+            display:flex;
+            flex-direction: column;
+            gap:25px;
+            position: relative;
+            z-index: 1;
+        }
+        #bc-simple-text-{{_.id}} .heading-wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        #bc-simple-text-{{_.id}} .heading-wrapper h2{
+            color:#ffffff;
+            font-size: {{font-heading-mobile.value}}px;
+            line-height: 1;
+            text-transform: capitalize;
+        }
+        #bc-simple-text-{{_.id}} p{
+            color: #ffffff;
+            font-size: {{font-para-mobile.value}}px;
+            max-width: 314px;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 15px;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper ul{
+            list-style-type: none;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper ul li{
+            color: #ffffff;
+            border-bottom: 2px solid;
+            padding: 15px 0;
+            font-size: {{font-list-mobile.value}}px;
+            text-transform: uppercase;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper ul li:last-child{
+            border-bottom: none;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper a{
+            color: #ffffff;
+            background: transparent;
+            padding: 16px 25px;
+            border-radius: 5px;
+            border: 2px solid  #00D1FF;
+            width: max-content;
+            text-decoration: none;
+            font-size: {{font-anchor-mobile.value}}px;
+            font-weight:700;
+            letter-spacing:0.32px;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper a:hover{
+            background-color: #ffffff;
+            color: #00D1FF;
+        }
+    @media screen and (min-width: 1023px){
+        #bc-simple-text-{{_.id}}{
+            padding: 181px 23px 123px 23px;
+        }
+        #bc-simple-text-{{_.id}} .wrapper{
+            max-width: 1335px;
+            margin: 0 auto;
+        }
+        #bc-simple-text-{{_.id}} .heading-wrapper h2{
+            font-size: {{font-heading-desktop.value}}px;
+            max-width: 860px;
+        }
+        #bc-simple-text-{{_.id}} p{
+            font-size: {{font-para-desktop.value}}px;
+            margin-top: 42px;
+        }
+        #bc-simple-text-{{_.id}} .heading-wrapper img{
+            width: 57px;
+            height: 91px;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: end;
+            margin: 0;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper a{
+            font-size: {{font-anchor-desktop.value}}px;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper ul{
+            width: 60%;
+            max-width: 658px;
+        }
+        #bc-simple-text-{{_.id}} .features-wrapper ul li{
+            padding: 26px 0 23px 0;
+            font-size: {{font-list-desktop.value}}px;
+        }
+    }
+</style>
+    
+    <section id='bc-simple-text-{{_.id}}'>
+        <div>
+        <div class="wrapper">
+            {{#or heading image.src}}
+        <div class="heading-wrapper">
+            {{#if heading}}
+            <h2>{{heading}}</h2>
+            {{/if}}
+            {{{svgContent}}} 
+        </div>
+        {{/or}}
+        {{#if text}}
+        <p>{{text}}</p>
+        {{/if}}
+        <div class="features-wrapper">
+            {{#if Features}}
+            <ul>
+                {{#each Features}}
+                <li>{{feature}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+            {{#and link anchor-text }}
+            <a href="{{link}}">{{anchor-text}}</a>
+            {{/and}}
+        </div>
+    </div>
+    </section>
+

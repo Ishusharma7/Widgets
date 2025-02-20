@@ -1,0 +1,630 @@
+[
+  {
+    "type": "hidden",
+    "settings": [
+        {
+            "id": "title",
+            "default": "Hero Banner Title"
+        },
+        {
+            "id": "subtitle",
+            "default": "Add a description for this hero banner. This is a great place to highlight a promotion."
+        },
+        {
+            "id": "buttonText",
+            "default": "Shop now"
+        },
+        {
+          "id": "initial_subtitle",
+          "default": "All new"
+      }
+    ]
+},
+{
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+        {
+            "label": "Banner",
+            "settings": [
+                {
+                    "type": "select",
+                    "id": "display",
+                    "label": "Enable Widget",
+                    "default": "flex",
+                    "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Yes",
+                        "value": "flex"
+                      },
+                      {
+                        "label": "No",
+                        "value": "none"
+                      }
+                    ]
+                  }
+                  },
+                {
+                    "type": "input",
+                    "label": "Banner link",
+                    "id": "bannerLink",
+                    "default": "",
+                    "typeMeta": {
+                        "placeholder": "https://"
+                    }
+                },
+                {
+                    "type": "alignment",
+                    "label": "Content align",
+                    "id": "contentAlignment",
+                    "default": {
+                        "horizontal": "left"
+                    },
+                    "typeMeta": {
+                        "display": "horizontal"
+                    }
+                },
+                {
+                    "type": "imageManager",
+                    "id": "imageUrl",
+                    "default": {
+                        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                        "type": "IMAGE_MANAGER"
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Banner size",
+                    "id": "containerHeight",
+                    "default": "500px",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "Small",
+                                "value": "300px"
+                            },
+                            {
+                                "label": "Medium",
+                                "value": "400px"
+                            },
+                            {
+                                "label": "Large",
+                                "value": "500px"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Image fit",
+                    "id": "imageFit",
+                    "default": "fill",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "Fill to box",
+                                "value": "fill"
+                            },
+                            {
+                                "label": "Fit to box",
+                                "value": "fit"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "alignment",
+                    "label": "Image align",
+                    "id": "imageAlignment",
+                    "default": {
+                        "horizontal": "center",
+                        "vertical": "middle"
+                    },
+                    "typeMeta": {
+                        "display": "both"
+                    }
+                },
+                {
+                    "type": "range",
+                    "label": "Image opacity",
+                    "id": "imageOpacity",
+                    "default": 100,
+                    "typeMeta": {
+                        "rangeValues": {
+                            "min": 0,
+                            "max": 100,
+                            "step": 1,
+                            "unit": "%"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Text",
+            "settings": [
+                {
+                    "type": "visibility",
+                    "label": "Initial Title",
+                    "id": "initialTitleVisible",
+                    "default": "show"
+                },
+                {
+                    "type": "visibility",
+                    "label": "Title",
+                    "id": "titleVisible",
+                    "default": "show"
+                },
+                {
+                    "type": "typography",
+                    "label": "Title style",
+                    "id": "titleStyle",
+                    "default": "default"
+                },
+                {
+                    "type": "select",
+                    "label": "Font family",
+                    "id": "titleFontFamily",
+                    "default": "Germania One, Arial, Helvetica, sans-serif",
+                    "typeMeta": {
+                        "selectOptions": [
+                          
+                            {
+                                "label": "Germania one",
+                                "value": "Germania One, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                              "label": "titilium",
+                              "value": "Titillium Web, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                              "label": "Theme Default",
+                              "value": "inherit"
+                            },
+                            {
+                                "label": "Arial",
+                                "value": "Arial, sans-serif"
+                            },
+                            {
+                                "label": "Tahoma",
+                                "value": "Tahoma, sans-serif"
+                            },
+                            {
+                                "label": "Verdana",
+                                "value": "Verdana, sans-serif"
+                            },
+                            {
+                                "label": "Lucida",
+                                "value": "Lucida, sans-serif"
+                            },
+                            {
+                                "label": "Times New Roman",
+                                "value": "Times New Roman, serif"
+                            },
+                            {
+                                "label": "Courier",
+                                "value": "Courier, serif"
+                            },
+                            {
+                                "label": "Georgia",
+                                "value": "Georgia, serif"
+                            },
+                            {
+                                "label": "Palatino",
+                                "value": "Palatino, serif"
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "titleStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Font weight",
+                    "id": "titleFontWeight",
+                    "default": "400",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "Thin",
+                                "value": "100"
+                            },
+                            {
+                                "label": "Extra Light (Ultra Light)",
+                                "value": "200"
+                            },
+                            {
+                                "label": "Light",
+                                "value": "300"
+                            },
+                            {
+                                "label": "Normal",
+                                "value": "400"
+                            },
+                            {
+                                "label": "Medium",
+                                "value": "500"
+                            },
+                            {
+                                "label": "Semi Bold (Demi Bold)",
+                                "value": "600"
+                            },
+                            {
+                                "label": "Bold",
+                                "value": "700"
+                            },
+                            {
+                                "label": "Extra Bold (Ultra Bold)",
+                                "value": "800"
+                            },
+                            {
+                                "label": "Black (Heavy)",
+                                "value": "900"
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "titleStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                  "type": "color",
+                  "label": "Title Text color",
+                  "id": "TitleTextColor",
+                  "default": "#444444"
+              },
+                {
+                    "type": "number",
+                    "label": "Font size",
+                    "id": "titleFontSize",
+                    "default": {
+                        "value": 36,
+                        "type": "px"
+                    },
+                    "typeMeta": {
+                        "parseType": "integer"
+                    },
+                    "conditional": {
+                        "key": "titleStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                    "type": "number",
+                    "label": "Font size Mobile",
+                    "id": "titleFontSizeMobile",
+                    "default": {
+                        "value": 22,
+                        "type": "px"
+                    },
+                    "typeMeta": {
+                        "parseType": "integer"
+                    },
+                    "conditional": {
+                        "key": "titleStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                    "type": "boxModel",
+                    "label": "Margin",
+                    "id": "margin",
+                    "default": {
+                      "top": {
+                        "value": "0",
+                        "type": "px"
+                      },
+                      "right": {
+                        "value": "0",
+                        "type": "px"
+                      },
+                      "bottom": {
+                        "value": "0",
+                        "type": "px"
+                      },
+                      "left": {
+                        "value": "0",
+                        "type": "px"
+                      }
+                    }
+                  },
+                  {
+                    "type": "boxModel",
+                    "label": "Padding",
+                    "id": "padding",
+                    "default": {
+                      "top": {
+                        "value": "0",
+                        "type": "px"
+                      },
+                      "right": {
+                        "value": "0",
+                        "type": "px"
+                      },
+                      "bottom": {
+                        "value": "30",
+                        "type": "px"
+                      },
+                      "left": {
+                        "value": "20",
+                        "type": "px"
+                      }
+                    }
+                  },
+                {
+                    "type": "visibility",
+                    "label": "Description",
+                    "id": "descriptionVisible",
+                    "default": "show"
+                },
+                {
+                    "type": "typography",
+                    "label": "Description style",
+                    "id": "descriptionStyle",
+                    "default": "default"
+                },
+                {
+                    "type": "select",
+                    "label": "Font family",
+                    "id": "descriptionFontFamily",
+                    "default": "Titillium Web, Arial, Helvetica, sans-serif",
+                    "typeMeta": {
+                        "selectOptions": [
+
+                            {
+                                "label": "Theme Default",
+                                "value": "inherit"
+                            },
+                            {
+                                "label": "Germania one",
+                                "value": "Germania One, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                              "label": "titilium",
+                              "value": "Titillium Web, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                                "label": "Arial",
+                                "value": "Arial, sans-serif"
+                            },
+                            {
+                                "label": "Tahoma",
+                                "value": "Tahoma, sans-serif"
+                            },
+                            {
+                                "label": "Verdana",
+                                "value": "Verdana, sans-serif"
+                            },
+                            {
+                                "label": "Lucida",
+                                "value": "Lucida, sans-serif"
+                            },
+                            {
+                                "label": "Times New Roman",
+                                "value": "Times New Roman, serif"
+                            },
+                            {
+                                "label": "Courier",
+                                "value": "Courier, serif"
+                            },
+                            {
+                                "label": "Georgia",
+                                "value": "Georgia, serif"
+                            },
+                            {
+                                "label": "Palatino",
+                                "value": "Palatino, serif"
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "descriptionStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                    "type": "select",
+                    "label": "Font weight",
+                    "id": "descriptionFontWeight",
+                    "default": "400",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "Thin",
+                                "value": "100"
+                            },
+                            {
+                                "label": "Extra Light (Ultra Light)",
+                                "value": "200"
+                            },
+                            {
+                                "label": "Light",
+                                "value": "300"
+                            },
+                            {
+                                "label": "Normal",
+                                "value": "400"
+                            },
+                            {
+                                "label": "Medium",
+                                "value": "500"
+                            },
+                            {
+                                "label": "Semi Bold (Demi Bold)",
+                                "value": "600"
+                            },
+                            {
+                                "label": "Bold",
+                                "value": "700"
+                            },
+                            {
+                                "label": "Extra Bold (Ultra Bold)",
+                                "value": "800"
+                            },
+                            {
+                                "label": "Black (Heavy)",
+                                "value": "900"
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "descriptionStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                    "type": "number",
+                    "label": "Font size",
+                    "id": "descriptionFontSize",
+                    "default": {
+                        "value": 21,
+                        "type": "px"
+                    },
+                    "typeMeta": {
+                        "parseType": "integer"
+                    },
+                    "conditional": {
+                        "key": "descriptionStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                },
+                {
+                    "type": "color",
+                    "label": "Text color",
+                    "id": "textColor",
+                    "default": "#444444"
+                },
+                {
+                    "type": "number",
+                    "label": "Font size Mobile",
+                    "id": "descriptionFontSizeMobile",
+                    "default": {
+                        "value": 18,
+                        "type": "px"
+                    },
+                    "typeMeta": {
+                        "parseType": "integer"
+                    },
+                    "conditional": {
+                        "key": "descriptionStyle",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Button",
+            "settings": [
+                {
+                    "type": "visibility",
+                    "label": "Button",
+                    "id": "buttonVisible",
+                    "default": "show"
+                },
+                {
+                    "type": "typography",
+                    "label": "Button font",
+                    "id": "buttonFont",
+                    "default": "default"
+                },
+                {
+                    "type": "color",
+                    "label": "Button Text Color",
+                    "id": "button-text-color",
+                    "default": "#ffffff"
+                },
+                {
+                    "type": "select",
+                    "label": "Font family",
+                    "id": "buttonFontFamily",
+                    "default": "Titillium Web, Arial, Helvetica, sans-serif",
+                    "typeMeta": {
+                        "selectOptions": [
+                            {
+                                "label": "Theme Default",
+                                "value": "inherit"
+                            },
+                            {
+                              "label": "Germania one",
+                              "value": "Germania One, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                              "label": "titilium",
+                              "value": "Titillium Web, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                                "label": "Arial",
+                                "value": "Arial, sans-serif"
+                            },
+                            {
+                                "label": "Tahoma",
+                                "value": "Tahoma, sans-serif"
+                            },
+                            {
+                                "label": "Verdana",
+                                "value": "Verdana, sans-serif"
+                            },
+                            {
+                                "label": "Lucida",
+                                "value": "Lucida, sans-serif"
+                            },
+                            {
+                                "label": "Times New Roman",
+                                "value": "Times New Roman, serif"
+                            },
+                            {
+                                "label": "Courier",
+                                "value": "Courier, serif"
+                            },
+                            {
+                                "label": "Georgia",
+                                "value": "Georgia, serif"
+                            },
+                            {
+                                "label": "Palatino",
+                                "value": "Palatino, serif"
+                            }
+                        ]
+                    },
+                    "conditional": {
+                        "key": "buttonFont",
+                        "operator": "IN",
+                        "value": [
+                            "custom"
+                        ]
+                    }
+                }
+               
+            ]
+        }
+    ]
+}
+]
